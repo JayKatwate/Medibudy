@@ -1,0 +1,35 @@
+<!-- location and city -->
+<div class="bg-light py-3">
+    <div class="container">
+        <p class="mt-2">Showing Medicine Availability and Price in <span class="fw-bold text-primary"><i
+                    class="bi bi-geo-alt-fill"></i> {{locationobj.city}} {{locationobj.pincode}}</span></p>
+    </div>
+</div>
+
+<!-- Product info -->
+<div class="container w-75 mt-3">
+    <div class="row" *ngFor="let item of productdetails">
+        <div class="col-md-6 d-flex justify-content-end">
+            <img [src]="item.productImageSlug[0]" style="height: 400px; width: 400px;">
+        </div>
+        <div class="col-md-6">
+            <div class="mt-5">
+                <h2>{{item.description}}</h2>
+            </div>
+            <div class="mt-4 fw-bold d-flex justify-content-evenly">
+                <p class="text-decoration-line-through text-secondary">MRP ₹ {{item.actualPrice}}</p>
+                <h3>₹ {{item.discountPrice}} /-*</h3>
+            </div>
+            <div class="mt-4">
+                <p class="my-0">Manufacturer Name - {{item.brand}}</p>
+                <p class="my-0">Medicine Category - {{item.medicineCategory}}</p>
+                <p>Description - {{item.descriptionString}}</p>
+            </div>
+            <div class="d-flex justify-content-evenly mt-5">
+                <button type="button" class="btn btn-primary" (click)="addtocart(item)"><span class="mx-4">Add To Cart</span></button>
+                <button type="button" class="btn btn-light border border-primary" routerLink="/medicines-category-wise"><span class="mx-4" >Continue Shopping</span></button>
+            </div>
+            
+        </div>
+    </div>
+</div>

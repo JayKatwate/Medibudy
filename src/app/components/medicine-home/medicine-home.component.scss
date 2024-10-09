@@ -1,0 +1,57 @@
+.carousel-control-prev {
+    left: -8%;
+}
+
+.carousel-control-next {
+    right: -8%;
+}
+
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.scroll-content {
+    min-width: 600px;
+    border: 1px solid #f0f0f0;
+    padding: 10px;
+    display: inline-block;
+}
+
+.carousel-inner {
+    display: flex;
+  }
+  
+  .carousel-item {
+    overflow: hidden; 
+  }
+  
+  .overflow-auto {
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  .card {
+    flex: 0 0 auto; 
+    scroll-snap-align: start; 
+    min-width: 18rem; 
+    margin-right: 1rem; 
+  }
+
+  .list {
+    margin-left: 26%;
+    margin-right: 21%;
+  }
+  
+  .search {
+    margin-left: 12%;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+  
